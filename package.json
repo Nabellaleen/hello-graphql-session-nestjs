@@ -29,6 +29,7 @@
     "apollo-server-express": "2.11.0",
     "graphql": "14.6.0",
     "graphql-tools": "4.0.7",
+    "nestjs-session": "1.0.1",
     "passport": "0.4.1",
     "passport-local": "1.0.0",
     "reflect-metadata": "^0.1.13",

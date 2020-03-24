@@ -5,6 +5,8 @@ type User {
 
 type Query {
   user(username: String!): User
+  views: Int
+  me: User
 }
 
 type Mutation {
