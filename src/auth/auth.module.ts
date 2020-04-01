@@ -6,9 +6,17 @@ import { LocalStrategy } from './local.strategy';
 import { AuthController } from './auth.controller';
 import { AuthResolver } from './auth.resolver';
 import { SessionSerializer } from './session.serializer';
+import { PassportSessionModule } from './passport-session.module';
 
 @Module({
-  imports: [UsersModule, PassportModule],
+  imports: [
+    UsersModule,
+    PassportModule.register({
+      session: true,
+    }),
+    // PassportSessionModule.forRoot(),
+    PassportSessionModule.register(),
+  ],
   providers: [
     AuthService,
     LocalStrategy,
